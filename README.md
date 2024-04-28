@@ -15,4 +15,4 @@ Present fire suppression systems include:
   Flaw: Harmful to humans, requiring evacuation, thus service disruptions potentially costing millions
 
 ## Our Solution
-S.P.A.R.K: An atonomous mobile firefighting robot designed to extinguish small-scale localized fires with minimal water damage, no need for evacuation, thus reducing service disruptions, data loss, and costly equipment replacement.
+*S.P.A.R.K*: An atonomous mobile firefighting robot designed to extinguish small-scale localized fires with minimal water damage, no need for evacuation, thus reducing service disruptions, data loss, and costly equipment replacement.
