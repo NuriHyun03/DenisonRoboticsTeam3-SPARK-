@@ -24,4 +24,4 @@ The files contain code for sensor-activation and actuator-response for the follo
 - Microservo: To adjust the height of the turet in the vertical plane
 - Unipolar Stepper Motor: To rotate the turet at the precise angle to aim at the flame.
 - DC Pump: To pump water from storage to the hose in the turet to extinguish the fire when detected.
-- Drivers: To control the wheels of the mobile face
+- Drivers: To control the wheels of the mobile base.
