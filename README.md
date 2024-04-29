@@ -25,3 +25,6 @@ The files contain code for sensor-activation and actuator-response for the follo
 - Unipolar Stepper Motor: To rotate the turet at the precise angle to aim at the flame.
 - DC Pump: To pump water from storage to the hose in the turet to extinguish the fire when detected.
 - Drivers: To control the wheels of the mobile base.
+
+##Requirements and Compatibility
+ROS2 is required for effective communication and successful implementation.
