@@ -154,14 +154,14 @@ def check_front_wall():
         return 0
     
 def check_left_wall():
-    if US_Left.value < 0.1:
+    if US_Left.value < 0.025:
         print("Left Wall Detected")
         return 1
     else:
         return 0
     
 def check_right_wall():
-    if US_right.value < 0.1:
+    if US_right.value < 0.025:
         print("Right Wall Detected")
         print("Turn Requested")
         return 1
