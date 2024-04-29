@@ -46,7 +46,7 @@ pwmEn_BL = PWM(En_BL,freq=5000, duty_u16=40000)
 pwmEn_AR = PWM(En_AR,freq=5000, duty_u16=40000)
 pwmEn_BR = PWM(En_BR,freq=5000, duty_u16=40000)
 
-def move_forward():
+def move_backward():
     '''
     In1L.high()
     In2L.low()
@@ -68,7 +68,7 @@ def move_forward():
     print("move_forward")
     
 # Backward
-def move_backward():
+def move_forward():
     In1L.low()
     In2L.high()
     In3L.low()
