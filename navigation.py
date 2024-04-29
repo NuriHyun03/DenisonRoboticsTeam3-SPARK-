@@ -169,7 +169,7 @@ def check_right_wall():
         return 0
     
 def check_back_wall():
-    if US_Back.value < 0.1:
+    if US_Back.value < 0.025:
         print("Back Wall Detected")
         return 1
     else:
