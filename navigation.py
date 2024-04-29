@@ -146,7 +146,7 @@ def move_right():
     In4R.high()
     
 def check_front_wall():
-    if US_Front.value < 0.1:
+    if US_Front.value < 0.025:
         print("Front Wall Detected")
         print("Turn Requested")
         return 1
