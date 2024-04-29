@@ -65,7 +65,7 @@ def move_backward():
     In2R.low()
     In3R.high()
     In4R.low()
-    print("move_forward")
+    print("move_backward")
     
 # Backward
 def move_forward():
@@ -197,7 +197,7 @@ def setup():
     buttonPin = Pin(buttonPinNo, Pin.IN, Pin.PULL_DOWN)
     buttonPin.irq(trigger=Pin.IRQ_RISING, handler=buttonISR)
     
-def loop():
+'''def loop():
     while True:
         while button_clicked == 0 and flame = 0:
             frontWall = check_front_wall()
@@ -251,7 +251,7 @@ def loop():
             utime.sleep(1)
             button_clicked == 1
 '''
-def loop():
+"""def loop():
     print("moving forward")
     turn_right()
     utime.sleep_ms(850)
@@ -262,3 +262,69 @@ def loop():
 if __name__ == "__main__":
     setup()
     loop()
+"""
+def loop():
+    while True:
+        # Check button and flame status before entering the main logic
+        if button_clicked == 0 and flame == 0:
+            while True:
+                # Check wall states
+                frontWall = check_front_wall()
+                leftWall = check_left_wall()
+
+                utime.sleep_ms(100)
+
+                # If it detects a left wall but nothing in front
+                if frontWall == 0 and leftWall == 1:
+                    move_forward()
+                    utime.sleep_ms(500)
+
+                # If there are no walls
+                elif frontWall == 0 and leftWall == 0:
+                    # Turn left and position
+                    turn_left_and_position()
+                    stop()
+                    utime.sleep_ms(100)
+
+                    # Recheck left wall to determine if a 90-degree turn is needed
+                    leftWall = check_left_wall()
+                    utime.sleep_ms(200)
+
+                    if leftWall == 0:
+                        turn_left()
+                        utime.sleep_ms(830)
+                        stop()
+                        utime.sleep_ms(200)
+                        move_forward()
+                        utime.sleep_ms(700)
+                        stop()
+                        utime.sleep_ms(100)
+                    else:
+                        continue
+
+                # If there are walls in front and to the left
+                elif frontWall == 1 and leftWall == 1:
+                    # Turn right 90 degrees
+                    turn_right()
+                    utime.sleep_ms(830)
+                    stop()
+                    utime.sleep_ms(200)
+
+                # If there's a wall in front but not to the left
+                elif frontWall == 1 and leftWall == 0:
+                    # Turn right
+                    turn_right()
+                    utime.sleep_ms(830)
+                    stop()
+                    utime.sleep_ms(200)
+                    
+                # If button is clicked or flame is detected, exit the inner loop
+                if button_clicked != 0 or flame != 0:
+                    break
+        else:
+            # Stop the robot and wait until re-pressed
+            stop()
+
+# Ensure other necessary functions are defined elsewhere in the program
+
+
