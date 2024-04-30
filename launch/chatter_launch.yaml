@@ -1,0 +1,26 @@
+launch:
+
+- node:
+    pkg: "ff_sense"
+    exec: "publisher"
+    name: "talker"
+
+- node:
+    pkg: "ff_sense"
+    exec: "subscriber"
+    name: "listener"
+
+- node:
+    pkg: "ff_sense"
+    exec: "motorSub"
+    name: "motor"
+
+- node:
+    pkg: "ff_sense"
+    exec: "extinguish"
+    name: "pump"
+
+- node:
+    pkg: "ff_sense"
+    exec: "movement"
+    name: "stop"
