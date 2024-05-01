@@ -29,4 +29,5 @@ The files contain code for sensor-activation and actuator-response for the follo
 ## Requirements and Compatibility
 Hardware Requirements: Raspberry Pi, Raspberry Pi Pico
 Software Software Requirements: Micropython, ROS2 is required for effective communication and successful implementation.
-Additional Packages and Libraries: *add the software stuff here*
+Additional Packages and Libraries: import rclpy, from rclpy.node import Node, import time, import lgpio, import serial, from std_msgs.msg import String
+
