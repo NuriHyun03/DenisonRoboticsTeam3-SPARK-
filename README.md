@@ -31,4 +31,5 @@ The files contain code for sensor-activation and actuator-response for the follo
 - Software Software Requirements: Micropython, ROS2 is required for effective communication and successful implementation.
 - Additional Packages and Libraries: import rclpy, from rclpy.node import Node, import time, import lgpio, import serial, from std_msgs.msg import String
   (Please note that the ROS2 code was run on VSCode on a Linux Raspberry Pi requiring the use of lgpio. If you are running the code on a different piece of software then I recommend changing the package to match your system)
+- Rename navigation.py to main.py to run it on pico without cable.
 
