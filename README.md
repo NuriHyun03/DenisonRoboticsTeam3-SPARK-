@@ -20,14 +20,15 @@ Present fire suppression systems include:
 ## Files
 The files contain code for sensor-activation and actuator-response for the following components:
 - IR/Ultrasonic Flame Sensors: To detect the presence of fire.
-- Ultrasonic Sensors: To avoid obstacles when robot is mobile.
-- Microservo: To adjust the height of the turet in the vertical plane
-- Unipolar Stepper Motor: To rotate the turet at the precise angle to aim at the flame.
-- DC Pump: To pump water from storage to the hose in the turet to extinguish the fire when detected.
+- Ultrasonic Sensors: To avoid obstacles when the robot is mobile.
+- Microservo: To adjust the height of the turret in the vertical plane
+- Unipolar Stepper Motor: To rotate the turret at a precise angle to aim at the flame.
+- DC Pump: To pump water from storage to the hose in the turret to extinguish the fire when detected.
 - Drivers: To control the wheels of the mobile base.
 
 ## Requirements and Compatibility
-Hardware Requirements: Raspberry Pi, Raspberry Pi Pico
-Software Software Requirements: Micropython, ROS2 is required for effective communication and successful implementation.
-Additional Packages and Libraries: import rclpy, from rclpy.node import Node, import time, import lgpio, import serial, from std_msgs.msg import String
+- Hardware Requirements: Raspberry Pi, Raspberry Pi Pico
+- Software Software Requirements: Micropython, ROS2 is required for effective communication and successful implementation.
+- Additional Packages and Libraries: import rclpy, from rclpy.node import Node, import time, import lgpio, import serial, from std_msgs.msg import String
+  (Please note that the ROS2 code was run on VSCode on a Linux Raspberry Pi requiring the use of lgpio. If you are running the code on a different piece of software then I recommend changing the package to match your system)
 
